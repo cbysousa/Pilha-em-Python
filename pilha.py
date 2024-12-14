@@ -11,7 +11,7 @@ class Pilha:
 
     def push(self, elemento):
         node = Node(elemento)
-        self.next = self.top
+        node.next = self.top #o novo nó deve apontar para o topo atual
         self.top = node
         self._size += 1
 
@@ -32,12 +32,12 @@ class Pilha:
     
     def __len__(self):
         #retorna o número de elementos na pilha
-        return len(self._size)
+        return self._size
     
     def __repr__(self):
         r = ""
-        point = self.top
-        while(pointer):
+        pointer = self.top
+        while pointer:
             r = r + str(pointer.data) + "\n"
             pointer = pointer.next
         return r
