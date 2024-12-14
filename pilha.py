@@ -31,8 +31,8 @@ class Pilha:
         raise IndexError('A pilha está vazia!')
     
     def __len__(self):
-        #retorna o tamanho da lista
-        return self._size
+        #retorna o número de elementos na pilha
+        return len(self._size)
     
     def __repr__(self):
         r = ""
